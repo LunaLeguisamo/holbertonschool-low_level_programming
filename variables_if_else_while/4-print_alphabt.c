@@ -14,7 +14,7 @@ int main(void)
 
 	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
-		while (alphabet != 'q' & alphabet != 'e')
+		while (alphabet != 'q' && alphabet != 'e')
 		{
 			putchar(alphabet);
 		}
