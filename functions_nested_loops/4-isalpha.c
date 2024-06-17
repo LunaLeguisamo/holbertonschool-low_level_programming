@@ -4,6 +4,8 @@
  * int _isalpha(int c) - main
  *
  * Return: 0
+ * @c: Returns 1 if the input is lowercase or uppercase
+ * @c: Returns 0 otherwise
  */
 
 int _isalpha(int c)

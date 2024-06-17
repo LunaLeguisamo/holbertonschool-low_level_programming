@@ -4,6 +4,9 @@
  * _islower - main
  *
  * Return: 0
+ *
+ * @c: Returns 1 if the input is lowercase
+ * @c: Returns 0 otherwise
  */
 
 int _islower(int c)
