@@ -25,6 +25,7 @@ int main(void)
 			if (n == 100)
 			{
 				printf("Buzz\n");
+				break;
 			}
 			printf("Buzz ");
 		}
