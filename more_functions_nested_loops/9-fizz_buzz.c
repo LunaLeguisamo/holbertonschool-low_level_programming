@@ -2,7 +2,6 @@
 /**
  * main - main
  * Return: 0
- * @n: number
  */
 
 int main(void)
