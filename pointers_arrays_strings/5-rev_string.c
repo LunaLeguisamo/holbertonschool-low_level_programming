@@ -2,6 +2,7 @@
 
 /**
  * _strlen -  function that returns the length of a string
+ * Return: (counter)
  * @s: a pointer
  */
 
@@ -18,7 +19,7 @@ int _strlen(char *s)
 }
 
 /**
- * rev_ string - function that reverses a string
+ * rev_string - function that reverses a string
  * @s: a pointer
  */
 
