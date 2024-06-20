@@ -22,17 +22,23 @@ int _strlen(char *s)
  * @s: a pointer
  */
 
-void rev_string(char *s);
+void rev_string(char *s)
 {
 	int len = _strlen(s);
-	char *start = s;
-	char *end = s + len - 1;
+	char array[800];
+	int var;
+	int counter;
 
-	while (start < end)
+	var = 0;
+	counter = 0;
+	for (counter = 0; counter <= len; counter++)
 	{
-		swap_int(start, end);
-		start++;
-		end--;
+		array[counter] = s[counter];
 	}
-	_putchar(s);
+
+	for (counter = len - 1; counter >= 0; counter--)
+	{
+		s[var] = array[counter];
+		var++;
+	}
 }
