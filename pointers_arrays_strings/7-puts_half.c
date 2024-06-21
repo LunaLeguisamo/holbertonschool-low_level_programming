@@ -36,20 +36,24 @@ void puts_half(char *str)
 	int counter;
 
 	len = _strlen(str);
-	i = len / 2;
-	n = (len - 1) / 2;
-	for (counter = i; counter < len; counter++)
+	i = (len - 1) / 2;
+	n = ((len - 1) - 1) / 2;
+	
+	if (len % 2 != 0)
 	{
-		if (len % 2 != 0)
-		{
-			n++;
-			_putchar(str[n]);
-		}
+	for (counter = n; counter < len; counter++)
+	{
+		n++;
+		_putchar(str[n]);
+	}
+	}
 	else
 	{
-		i++;
-		_putchar(str[i]);
-	}
+	for (counter = i; counter < len; counter++)
+        {
+                i++;
+                _putchar(str[i]);
+        }
 	}
 	_putchar('\n');
 }
