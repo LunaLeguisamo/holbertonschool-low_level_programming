@@ -38,20 +38,19 @@ void puts_half(char *str)
 	len = _strlen(str);
 	i = (len - 1) / 2;
 	n = (len - 1) / 2;
-	
 	if (len % 2 != 0)
 	{
-	for (counter = n; counter < len; counter++)
-	{
-		_putchar(str[counter]);
-	}
+		for (counter = n + 1; counter < len; counter++)
+		{
+			_putchar(str[counter]);
+		}
 	}
 	else
 	{
-	for (counter = i + 1; counter < len; counter++)
-        {
-                _putchar(str[counter]);
-        }
+		for (counter = i + 1; counter < len; counter++)
+		{
+			_putchar(str[counter]);
+		}
 	}
 	_putchar('\n');
 }
