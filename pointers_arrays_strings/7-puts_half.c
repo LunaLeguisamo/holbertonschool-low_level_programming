@@ -38,13 +38,13 @@ void puts_half(char *str)
 	len = _strlen(str);
 	i = len / 2;
 	n = (len - 1) / 2;
-	for (counter = 0; counter <= len; counter++)
+	for (counter = 0; counter < len; counter++)
 	{
-	if (len % 2 != 0)
-	{
+		if (len % 2 != 0)
+		{
 		_putchar(str[n]);
 		n++;
-	}
+		}
 	else
 	{
 		_putchar(str[i]);
