@@ -47,8 +47,8 @@ void puts_half(char *str)
 		}
 	else
 	{
-		_putchar(str[i]);
 		i++;
+		_putchar(str[i]);
 	}
 	}
 	_putchar('\n');
