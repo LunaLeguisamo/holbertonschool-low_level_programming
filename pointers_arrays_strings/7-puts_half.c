@@ -43,16 +43,14 @@ void puts_half(char *str)
 	{
 	for (counter = n; counter < len; counter++)
 	{
-		n++;
-		_putchar(str[n]);
+		_putchar(str[counter]);
 	}
 	}
 	else
 	{
-	for (counter = i; counter < len; counter++)
+	for (counter = i + 1; counter < len; counter++)
         {
-                i++;
-                _putchar(str[i]);
+                _putchar(str[counter]);
         }
 	}
 	_putchar('\n');
