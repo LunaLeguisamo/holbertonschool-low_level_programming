@@ -30,8 +30,8 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int dest_len = _strlen(dest);
 	int counter;
-	
-	for (counter = 0; counter < n && src[counter]!= '\0'; counter++)
+
+	for (counter = 0; counter < n && src[counter] != '\0'; counter++)
 	{
 		dest[dest_len + counter] = src[counter];
 	}
