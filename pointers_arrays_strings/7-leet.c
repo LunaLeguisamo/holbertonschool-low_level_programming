@@ -9,8 +9,8 @@
 
 char *leet(char *p)
 {
-	char letters[5] = {'A','E','O','T','L'};
-	int numbers[5] = {4,3,0,7,1};
+	char letters[5] = {'A', 'E', 'O', 'T', 'L'};
+	int numbers[5] = {4, 3, 0, 7, 1};
 	int counter;
 	int counter1 = 0;
 	int len = _strlen(p);
@@ -19,7 +19,8 @@ char *leet(char *p)
 	{
 			while (counter1 < 5)
 			{
-				if (p[counter] == letters[counter1] || (letters[counter1] + 32) == p[counter])
+				if (p[counter] == letters[counter1] ||
+				(letters[counter1] + 32) == p[counter])
 				{
 					p[counter] = numbers[counter1] + '0';
 				}
