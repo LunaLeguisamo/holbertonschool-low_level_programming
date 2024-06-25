@@ -34,6 +34,6 @@ char *cap_string(char *p)
 
 		counter++;
 	}
-	
+
 	return (p);
 }
