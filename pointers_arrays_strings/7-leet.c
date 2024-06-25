@@ -20,7 +20,7 @@ char *leet(char *p)
 			while (counter1 < 5)
 			{
 				if (p[counter] == letters[counter1] ||
-				(letters[counter1] + 32) == p[counter])
+						p[counter] == letters[counter1] + 32)
 				{
 					p[counter] = numbers[counter1] + '0';
 				}
