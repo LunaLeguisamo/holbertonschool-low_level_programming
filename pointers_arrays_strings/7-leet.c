@@ -17,16 +17,16 @@ char *leet(char *p)
 
 	for (counter = 0; counter < len; counter++)
 	{
-			while (counter1 < 5)
+		while (counter1 < 5)
+		{
+			if (p[counter] == letters[counter1] ||
+				p[counter] == letters[counter1] + 32)
 			{
-				if (p[counter] == letters[counter1] ||
-						p[counter] == letters[counter1] + 32)
-				{
-					p[counter] = numbers[counter1] + '0';
-				}
-				counter1++;
+				p[counter] = numbers[counter1] + '0';
 			}
-			counter1 = 0;
+			counter1++;
+		}
+		counter1 = 0;
 	}
 	return (p);
 }
