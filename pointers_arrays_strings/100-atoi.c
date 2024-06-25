@@ -38,12 +38,10 @@ int _atoi(char *s)
 	{
 		if (s[counter] >= '0' && s[counter] <= '9')
 		{
-			while (v < numbers)
+			for (v = 1; v < numbers; v++)
 			{
 				mult *= 10;
-				v++;
 			}
-			v = 1;
 			numbers--;
 			result += (s[counter] - '0') * mult * sign;
 			mult = 1;
