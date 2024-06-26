@@ -9,19 +9,19 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int index, sum1 = 0, sum2 = 0;
+	int counter, sum1 = 0, sum2 = 0;
 
-	for (index = 0; index < size; index++)
+	for (counter = 0; counter < size; counter++)
 	{
-		sum1 += a[index];
+		sum1 += a[counter];
 		a += size;
 	}
 
 	a -= size;
 
-	for (index = 0; index < size; index++)
+	for (counter = 0; counter < size; counter++)
 	{
-		sum2 += a[index];
+		sum2 += a[counter];
 		a -= size;
 	}
 
