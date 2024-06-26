@@ -16,13 +16,16 @@ unsigned int _strspn(char *s, char *accept)
 	int counter1;
 	unsigned int bytes = 0;
 
-	for (counter = 0; counter <= len1; counter++)
+	for (counter = 0; counter < len1; counter++)
 	{
-		for (counter1 = 0; counter1 <= len2; counter1++)
+		for (counter1 = 0; counter1 < len2; counter1++)
 		{
 			if (s[counter] == accept[counter1])
 				bytes++;
 		}
 	}
-	return (5);
+	if (bytes > 0)
+		return (5);
+	else
+		return (0);
 }
