@@ -14,7 +14,7 @@ int find_root(int n, int root)
 	{
 		return (root);
 	}
-	else if(root * root > n)
+	else if (root * root > n)
 	{
 		return (-1);
 	}
