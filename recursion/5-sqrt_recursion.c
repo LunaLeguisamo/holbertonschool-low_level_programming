@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - function that returns the natural square root of a number
- * find_root - function for find the root of n
- * @root: The square root of n
+ * find_root - function to find the square root of n
  * @n: number base for obtain the natural square root number
+ * @root: number to find the square root of n
  * Return: The natural square root number of n
  */
 
@@ -23,6 +22,12 @@ int find_root(int n, int root)
 		return (find_root(n, root + 1));
 	}
 }
+
+/**
+ * _sqrt_recursion - function that returns the natural square root of a number
+ * @n: number base for obtain the natural square root number
+ * Return: The natural square root number of n
+ */
 
 int _sqrt_recursion(int n)
 {
