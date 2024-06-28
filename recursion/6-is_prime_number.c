@@ -6,16 +6,15 @@
  * Return: 1 if the input integer is a prime number, otherwise return 0
  */
 
-int mult(int n)
+int mult(int n, int i)
 {
-	if (n % n == 0 && n % 1 == 0 && n > 1)
-	{
+	if (n < 2)
+		return (0);
+	if (n == i)
 		return (1);
-	}
-	else
-	{
-		return (mult(n + 1));
-	}
+	if (n % i == 0)
+		return (0);
+	return (mult(n, i + 1));
 }
 
 /**
@@ -26,12 +25,5 @@ int mult(int n)
 
 int is_prime_number(int n)
 {
-	if (n > 1)
-	{
-		return (mult(n));
-	}
-	else
-	{
-		return (0);
-	}
+	return (mult(n, 2));
 }
