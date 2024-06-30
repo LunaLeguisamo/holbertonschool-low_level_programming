@@ -11,13 +11,22 @@
 
 int main(int argc,  char **argv)
 {
-	int counter;
+	int counter, counter2;
 	int sum;
 
 	sum = 0;
 	for (counter = 1; counter < argc; counter++)
 	{
 		sum += atoi(argv[counter]);
+
+		for (counter2 = 0; argv[counter][counter2] != '\0'; counter2++)
+		{
+			if (!(isdigit(argv[counter][counter2])))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 	}
 
 	if (argc == 1)
