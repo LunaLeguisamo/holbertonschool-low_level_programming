@@ -16,10 +16,13 @@ char *str_concat(char *s1, char *s2)
 	char *con;
 	unsigned int size, size1, counter, counter1;
 
-	if (s1 != NULL)
-		size = _strlen(s1);
-	if(s2 != NULL)
-		size1 = _strlen(s2);
+	size = _strlen(s1);
+	size1 = _strlen(s2);
+	
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	con = malloc((size + size1 + 1) * sizeof(char));
 
@@ -36,5 +39,6 @@ char *str_concat(char *s1, char *s2)
 		con[size + counter1] = s2[counter1];
 	}
 	con[size + size1] = '\0';
+
 	return (con);
 }
