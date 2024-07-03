@@ -19,18 +19,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int lens1 = _strlen(s1);
 	unsigned int lens2 = _strlen(s2);
 	char *new_str = malloc(lens1 + n + 1);
-	
+
 	if (s1 == NULL)
 		s1 = "";
 
 	if (s2 == NULL)
 		s2 = "";
 
-	
 	if (n >= lens2)
 		n = lens2;
-	
-	
+
 	if (new_str == NULL)
 		return (NULL);
 
