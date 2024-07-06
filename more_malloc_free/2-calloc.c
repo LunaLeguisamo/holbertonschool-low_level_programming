@@ -5,7 +5,7 @@
 /**
  * _calloc - function that allocates memory for an array, using mallo
  * @size: Number of bytes to the array
- * @nmemb: 
+ * @nmemb: Number of elements of the array
  * Return: If nmemb or size is 0, return NULL. If malloc fails, return NULL.
  */
 
@@ -20,9 +20,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (size == 0)
 		return (NULL);
-	
-	memory = malloc(nmemb * size + 1);
-	
+
+	memory = malloc(nmemb * size);
+
 	if (memory == NULL)
 		return (NULL);
 
