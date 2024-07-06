@@ -31,6 +31,9 @@ int *array_range(int min, int max)
 
 	array = malloc(len * sizeof(int));
 
+	if (array == NULL)
+		return (NULL);
+
 	for (counter = 0; counter < len; counter++)
 	{
 		array[counter] = min;
