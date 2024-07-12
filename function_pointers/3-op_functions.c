@@ -48,6 +48,7 @@ int op_sub(int a, int b)
 int op_mul(int a, int b)
 {
 	int c;
+
 	c = a * b;
 
 	return (c);
@@ -57,17 +58,17 @@ int op_mul(int a, int b)
  * op_div - Divides two integers.
  * @a: The dividend integer.
  * @b: The divisor integer.
- *
  * Return: The result of dividing a by b.
  */
 
 int op_div(int a, int b)
 {
 	int c;
+
 	if (b == 0)
 	{
 		printf("Error/n");
-		exit (100);
+		exit(100);
 	}
 
 	c = a / b;
@@ -86,6 +87,7 @@ int op_div(int a, int b)
 int op_mod(int a, int b)
 {
 	int c;
+
 	if (b == 0)
 	{
 		printf("Error/n");
