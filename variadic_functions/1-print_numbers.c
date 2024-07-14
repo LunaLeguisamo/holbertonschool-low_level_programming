@@ -11,23 +11,21 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list print;
-	unsigned int i, sum;
+	unsigned int i;
 
 	va_start(print, n);
 
-	sum = 0;
 	for (i = 0; i < n; i++)
 	{
-		sum += va_arg(print, unsigned int);
 		if (separator == NULL || i == n - 1)
 		{
-			printf("%d", sum);
+			printf("%d",va_arg(print, unsigned int));
 		}
 		else
 		{
-			printf("%d%s", sum, separator);
+			printf("%d%s", va_arg(print, unsigned int), separator);
 		}
-		va_end(print);
 	}
 	printf("\n");
+	va_end(print);
 }
