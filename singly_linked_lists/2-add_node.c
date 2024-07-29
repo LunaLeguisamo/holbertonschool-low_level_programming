@@ -1,15 +1,5 @@
 #include "lists.h"
 
-int _strlen(char *str)
-{
-	int counter = 0;
-	while (str != NULL)
-	{
-		counter++;
-	}
-	return (counter);
-}
-
 /**
  * add_node - Adds a new node at the beginning of a linked list of type list_t.
  * @head: Double pointer to the head of the linked list.
