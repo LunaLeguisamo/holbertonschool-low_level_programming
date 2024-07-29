@@ -19,7 +19,7 @@ size_t list_len(const list_t *h)
 	{
 		if (head == NULL)
 		{
-			count++;
+			counter++;
 		}
 		else
 		{
