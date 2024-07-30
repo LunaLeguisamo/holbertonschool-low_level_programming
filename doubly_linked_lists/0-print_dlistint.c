@@ -2,8 +2,8 @@
 
 /**
  * print_dlistint - Prints all the elements of a doubly
- * linked list of type list_t.
- * @h: Pointer to the head of the linked list.
+ * linked list of type dlistint_t.
+ * @h: Pointer to the head of the doubly linked list.
  *
  * Return: The number of nodes in the doubly linked list.
  */
