@@ -31,7 +31,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (newNodo);
 	}
 
-	while (nodo != NULL && index < idx - 1)
+	while (nodo != NULL && index < idx)
 	{
 		nodo = nodo->next;
 		index++;
