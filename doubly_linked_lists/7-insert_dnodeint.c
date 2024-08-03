@@ -44,7 +44,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 
 	newNodo->next = nodo->next;
-	nodo->prev->next = newNodo;
+	newNodo->prev = nodo;
+
+	if (nodo->next != NULL)
+	{
+		nodo->prev->next = newNodo;
+	}
+
 	nodo->next = newNodo;
 
 	return (newNodo);
