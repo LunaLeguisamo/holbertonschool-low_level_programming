@@ -31,18 +31,21 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (newNodo);
 	}
 
-	while (nodo != NULL)
+	while (nodo != NULL && index < idx - 1)
 	{
-		if (index == idx)
-		{
-			(nodo->prev)->next = newNodo;
-			newNodo->next = nodo;
-			return (newNodo);
-		}
 		nodo = nodo->next;
 		index++;
 	}
 
-	free(newNodo);
-	return (NULL);
+	if (nodo == NULL)
+	{
+		free(newNodo);
+		return (NULL);
+	}
+
+	newNodo->next = nodo->next;
+	nodo->prev->next = newNodo;
+	nodo->next = newNodo;
+
+	return (newNodo);
 }
