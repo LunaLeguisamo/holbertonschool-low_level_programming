@@ -4,7 +4,7 @@
  * read_textfile - function that reads a text file
  * and prints it to the POSIX standard output
  * @filename: the file that want read and print
- * @letters: the number of letters it should read and print
+ ~* @letters: the number of letters it should read and print
  *
  * Return: the actual number of letters it could read and print
  * if the file can not be opened or read, return 0
@@ -41,10 +41,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	writeBytes = write(fd, buff, letters);
-	if (writeBytes == -1)
+	writeBytes = write(STDOUT_FILENO, buff, letters);
+	if (writeBytes == -1 || writeBytes < readBytes)
+	{
+		free(buff);
+		close(fd);
 		return (0);
+	}
 
-	close (fd);
+	free(buff);
+	close(fd);
 	return (readBytes);
 }
